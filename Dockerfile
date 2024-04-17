@@ -16,6 +16,6 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 RUN apk add chromium
 COPY --from=builder /home/node/ .
 
-Expose 21465
+EXPOSE 21465
 
 CMD [ "npm", "start", "wppconnect" ]
