@@ -1,4 +1,4 @@
-oseFROM node:lts-alpine3.18 as builder
+FROM node:lts-alpine3.18 as builder
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 WORKDIR /home/node
 
