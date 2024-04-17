@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.18 as builder
+oseFROM node:lts-alpine3.18 as builder
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 WORKDIR /home/node
 
@@ -15,5 +15,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
 RUN apk add chromium
 COPY --from=builder /home/node/ .
+
+Expose 21465
 
 CMD [ "npm", "start", "wppconnect" ]
